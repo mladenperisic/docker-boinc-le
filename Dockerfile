@@ -47,7 +47,7 @@ ADD firstrun.sh /etc/my_init.d/firstrun.sh
 RUN chmod +x /etc/my_init.d/firstrun.sh && \
 mkdir -p /nobody/boinc && \
 cd /nobody/boinc && \
-wget http://boinc.berkeley.edu/dl/boinc_7.2.42_x86_64-pc-linux-gnu.sh
+wget http://boinc.berkeley.edu/dl/boinc_7.4.25_x86_64-pc-linux-gnu.sh
 
 # Copy X app start script to right location
 COPY startapp.sh /startapp.sh
@@ -58,4 +58,4 @@ COPY startapp.sh /startapp.sh
 
 # Place whater volumes and ports you want exposed here:
 VOLUME ["/config"]
-EXPOSE 3389 8080
+EXPOSE 3389 8080 31416
